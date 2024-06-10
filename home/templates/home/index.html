@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<a href="{% url 'home:list-by-date' anteriore %}"><button><<<<</button></a>
+<a href="{% url 'home:list-by-date' prossimo %}"><button>>>>></button></a>
+
+{% for giorno, turno in turni.items %}
+    {{ giorno }}
+    {% for foo in turno %}
+        {{ foo.dip }}
+        {{ foo.orario }}
+    {% endfor %}
+    <br>
+{% endfor %}
+
+</body>
+</html>
