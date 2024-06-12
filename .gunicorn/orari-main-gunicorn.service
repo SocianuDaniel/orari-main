@@ -6,7 +6,7 @@ After=network.target
 User=webmaster
 Group=www-data
 WorkingDirectory=/home/webmaster/projects/orari-main
-ExecStart=/home/webmaster/projects/venv3.13.3/bin/gunicorn --access-logfile - --workers 3 --bind unix:/run/orari-main-gunicorn.sock orari.wsgi:aplication
+ExecStart=/home/webmaster/projects/venv3.13.3/bin/gunicorn --access-logfile - --workers 3 --bind unix:/run/gunicorn.sock orari.wsgi:aplication
 
 [Install]
 WantedBy=multi-user.target
