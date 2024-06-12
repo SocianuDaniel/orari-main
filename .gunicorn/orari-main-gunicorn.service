@@ -1,5 +1,5 @@
 [Unit]
-Description=orari-main gunicorn daemon
+Description=orari-main-gunicorn daemon
 After=network.target
 
 [Service]
